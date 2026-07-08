@@ -3,34 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yawn & Snooze Studio - Task Pulse</title>
+    <title>Yawn & Snooze Studio - Official Homepage</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 60px auto; padding: 0 20px; line-height: 1.7; color: #333; background-color: #fafafa; }
-        h1 { color: #1a1a1a; font-size: 2.5em; margin-bottom: 5px; }
+        :root {
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --donate-color: #ffdd00;
+            --donate-text: #000000;
+            --text-main: #1a1a1a;
+            --text-muted: #555;
+            --bg-card: #ffffff;
+        }
+
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 60px auto; 
+            padding: 0 20px; 
+            line-height: 1.7; 
+            color: #333; 
+            background-color: #fafafa; 
+        }
+        
+        h1 { color: var(--text-main); font-size: 2.5em; margin-bottom: 5px; }
         h2 { color: #2c3e50; margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
-        p { color: #555; font-size: 1.1em; }
-        .studio-tag { display: inline-block; background: #eef2f7; color: #4a5568; padding: 4px 12px; Skinner-radius: 4px; font-weight: bold; margin-bottom: 20px; font-size: 0.9em; }
-        .footer { margin-top: 60px; font-size: 0.9em; color: #888; border-top: 1px solid #e2e8f0; padding-top: 20px; text-align: center; }
+        p { color: var(--text-muted); font-size: 1.1em; }
+        
+        .studio-tag { 
+            display: inline-block; 
+            background: #eef2f7; 
+            color: #4a5568; 
+            padding: 4px 12px; 
+            border-radius: 4px; 
+            font-weight: bold; 
+            margin-bottom: 20px; 
+            font-size: 0.9em; 
+        }
+
+        /* Khối hiển thị sản phẩm */
+        .app-showcase {
+            background-color: var(--bg-card);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgb(0 0 0 / 0.02);
+        }
+
+        .app-title {
+            font-size: 1.5em;
+            color: var(--text-main);
+            margin: 0 0 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge-new {
+            background-color: #ef4444;
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-weight: bold;
+        }
+
+        .btn-visit-app {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 10px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-visit-app:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Khối kêu gọi Donate tổng của Studio */
+        .donate-section {
+            background: linear-gradient(135deg, #1e1b4b, #312e81);
+            color: white;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .donate-section h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+            color: #fff;
+        }
+
+        .donate-section p {
+            color: #c7d2fe;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .btn-donate {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--donate-color);
+            color: var(--donate-text);
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .btn-donate:hover {
+            transform: scale(1.03);
+        }
+
+        .footer { 
+            margin-top: 60px; 
+            font-size: 0.9em; 
+            color: #888; 
+            border-top: 1px solid #e2e8f0; 
+            padding-top: 20px; 
+            text-align: center; 
+        }
     </style>
 </head>
 <body>
     <h1>Yawn & Snooze Studio</h1>
     <span class="studio-tag">Multi-platform Apps & Games Developer</span>
-    <p>Chào mừng bạn đến với trang chủ của <strong>Yawn & Snooze Studio</strong>. Chúng tôi là một đơn vị sáng tạo độc lập, tập trung vào việc phát triển các ứng dụng và trò chơi đa nền tảng với tiêu chí: Đơn giản, tinh tế, và tối ưu trải nghiệm người dùng.</p>
+    <p>Chào mừng bạn đến với trang chủ của <strong>Yawn & Snooze Studio</strong>. Chúng tôi là một đơn vị sáng tạo độc lập, tập trung vào việc phát triển các ứng dụng và trò chơi đa nền tảng với tiêu chí: Đơn giản, tinh tế, và tối ưu trải nghiệm người dùng.</p>[cite: 1]
     
-    <h2>Ứng dụng chủ đạo: Task Pulse</h2>
-    <p><strong>Task Pulse</strong> là giải pháp quản lý công việc và tối ưu hóa hiệu suất mạnh mẽ dành cho hệ điều hành Windows và các nền tảng di động khác. Ứng dụng được thiết kế mượt mà để giúp bạn kiểm soát ngày làm việc một cách nhẹ nhàng nhất.</p>
+    <h2>Sản phẩm của chúng tôi</h2>
+    
+    <!-- Khu vực giới thiệu App Task Pulse -->
+    <div class="app-showcase">
+        <h3 class="app-title">Task Pulse <span class="badge-new">Mới nhất</span></h3>
+        <p style="font-size: 1em; margin: 0 0 16px 0;">
+            Giải pháp quản lý công việc và tối ưu hóa hiệu suất mạnh mẽ dành cho hệ điều hành Windows và các nền tảng di động khác. Thiết kế tối giản, mượt mà giúp bạn làm chủ thời gian.
+        </p>
+        <!-- Đường dẫn trỏ thẳng vào thư mục con /task_pulse -->
+        <a href="task_pulse/" class="btn-visit-app">Xem chi tiết & Tải về</a>
+    </div>
 
-    <h2>Chính sách bảo mật (Privacy Policy)</h2>
-    <p>Chính sách bảo mật này áp dụng cho ứng dụng <strong>Task Pulse</strong> được phát triển bởi Yawn & Snooze Studio. Chúng tôi cam kết tuyệt đối tôn trọng quyền riêng tư của bạn:</p>
-    <ul>
-        <li><strong>Không thu thập dữ liệu:</strong> Ứng dụng không thu thập, lưu trữ, sao lưu hoặc chia sẻ bất kỳ thông tin cá nhân nào của bạn.</li>
-        <li><strong>Lưu trữ cục bộ:</strong> Toàn bộ dữ liệu công việc, danh sách nhiệm vụ và cấu hình ứng dụng được mã hóa và lưu trữ cục bộ (Offline) hoàn toàn trên thiết bị của bạn.</li>
-        <li><strong>Quyền hạn ứng dụng:</strong> Ứng dụng chỉ yêu cầu các quyền cơ bản của hệ thống để vận hành các tính năng cốt lõi và không truy cập trái phép vào tài liệu cá nhân của người dùng.</li>
-    </ul>
+    <!-- Khối Donate Tổng -->
+    <div class="donate-section">
+        <h3>☕ Đồng hành cùng Yawn & Snooze Studio</h3>
+        <p>Các sản phẩm của chúng tôi hoàn toàn miễn phí, không quảng cáo (trên PC) và bảo mật tuyệt đối. Nếu bạn yêu thích chúng, hãy mời chúng tôi một ly cà phê để tiếp thêm động lực phát triển nhé!</p>
+        
+        <!-- Thay link Buy me a coffee của bạn vào đây -->
+        <a href="https://www.buymeacoffee.com/username_cua_ban" target="_blank" class="btn-donate">
+            🥤 Buy Me a Coffee
+        </a>
+    </div>
 
     <div class="footer">
-        Copyright &copy; 2026 Yawn & Snooze Studio. All rights reserved.
+        Copyright &copy; 2026 Yawn & Snooze Studio. All rights reserved.[cite: 1]
     </div>
 </body>
 </html>
