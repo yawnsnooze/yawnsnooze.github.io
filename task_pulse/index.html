@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Pulse v1.0.0 - Yawn & Snooze Studio</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .app-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            text-align: center;
+        }
+
+        .studio-badge {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 8px 0;
+            color: var(--text-main);
+        }
+
+        .version {
+            font-size: 1rem;
+            color: var(--text-muted);
+            background-color: #f1f5f9;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+
+        .description {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 32px auto;
+        }
+
+        /* Khối tải file & thông số kỹ thuật */
+        .download-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.125rem;
+            transition: background-color 0.2s;
+            box-shadow: 0 4px 6px -1px rgb(79 70 229 / 0.2);
+            margin-bottom: 16px;
+        }
+
+        .btn-download:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .file-info {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .hash-box {
+            font-family: monospace;
+            font-size: 0.8125rem;
+            background-color: #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 6px;
+            color: #334155;
+            word-break: break-all;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Hệ thống nút điều hướng (Dùng cho mục About/Website) */
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 32px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 32px;
+        }
+
+        .btn-outline {
+            display: block;
+            border: 1px solid #cbd5e1;
+            color: #334155;
+            font-weight: 500;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 0.9375rem;
+        }
+
+        .btn-outline:hover {
+            background-color: #f1f5f9;
+            border-color: #94a3b8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="app-card">
+            <div class="studio-badge">Yawn & Snooze Studio</div>
+            <h1>Task Pulse</h1>
+            <span class="version">Phiên bản v1.0.0 (PC)</span>
+            
+            <p class="description">
+                Ứng dụng quản lý công việc và tối ưu hóa thời gian tối giản, mượt mà dành riêng cho máy tính của bạn. Hoàn toàn chạy offline và bảo mật dữ liệu.
+            </p>
+
+            <!-- Khu vực tải App -->
+            <div class="download-box">
+                <!-- Đường dẫn tải file .exe nằm cùng thư mục -->
+                <a href="task_pulse.exe" class="btn-download">Tải về cho Windows (.exe)</a>
+                
+                <div class="file-info">
+                    <span><strong>Dung lượng:</strong> ~15 MB</span>
+                    <span><strong>Nền tảng:</strong> Windows 10/11</span>
+                </div>
+                
+                <!-- Thay mã Hash SHA256 thật của file exe vào đây để tăng độ uy tín -->
+                <div class="hash-box">
+                    SHA-256: 8f93b8271a... (Mã hash file của bạn)
+                </div>
+            </div>
+
+            <!-- Hệ thống nút bấm bổ trợ trải nghiệm người dùng -->
+            <div class="nav-buttons">
+                <!-- Nút dẫn về danh sách app -->
+                <a href="../all_app/" class="btn-outline">✨ Khám phá ứng dụng khác (More Apps)</a>
+                
+                <!-- Nút dẫn về trang chủ Studio (nơi có nút Donate tổng) -->
+                <a href="../" class="btn-outline">🏠 Ghé thăm Trang chủ Studio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Yawn & Snooze Studio. | <a href="privacy-pc.html">Chính sách bảo mật (Privacy Policy)</a></p>
+    </footer>
+
+</body>
+</html>
