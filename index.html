@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yawn & Snooze Studio - Official Homepage</title>
-    <!-- Các thẻ cấu hình hiển thị hiển thị trên Facebook -->
+    <!-- Cấu hình hiển thị hiển thị trên Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yawnsnooze.github.io/">
     <meta property="og:title" content="Yawn & Snooze Studio - Official Homepage">
     <meta property="og:description" content="Multi-platform Apps & Games Developer. Phát triển ứng dụng và trò chơi tối ưu, dọn rác Windows Pro và Task Pulse.">
-    <meta property="og:image" content="https://github.io">
+    <!-- Cập nhật: Sử dụng đường dẫn tương đối cho ảnh đại diện chia sẻ -->
+    <meta property="og:image" content="logo_goc.png">
 
-    <!-- Thẻ cấu hình hiển thị trên Twitter / X (Nếu cần) -->
+    <!-- Cấu hình hiển thị trên Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Yawn & Snooze Studio">
     <meta name="twitter:description" content="Multi-platform Apps & Games Developer.">
-    <meta name="twitter:image" content="https://github.io">
+    <!-- Cập nhật: Sử dụng đường dẫn tương đối cho ảnh đại diện chia sẻ -->
+    <meta name="twitter:image" content="logo_goc.png">
     <style>
         :root {
             --primary-color: #2563eb;
@@ -36,8 +38,21 @@
             color: #333; 
             background-color: #fafafa; 
         }
+
+        /* Thêm: Kiểu dáng cho container của logo */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Thêm: Kiểu dáng cho ảnh logo chính */
+        .logo {
+            width: 180px; /* Điều chỉnh kích thước nếu cần */
+            height: auto;
+            margin-bottom: 20px;
+        }
         
-        h1 { color: var(--text-main); font-size: 2.5em; margin-bottom: 5px; }
+        h1 { color: var(--text-main); font-size: 2.5em; margin: 0; } /* Cập nhật margin */
         h2 { color: #2c3e50; margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
         p { color: var(--text-muted); font-size: 1.1em; }
         
@@ -48,6 +63,7 @@
             padding: 4px 12px; 
             border-radius: 4px; 
             font-weight: bold; 
+            margin-top: 10px; /* Cập nhật margin */
             margin-bottom: 20px; 
             font-size: 0.9em; 
         }
@@ -159,8 +175,13 @@
     </style>
 </head>
 <body>
-    <h1>Yawn & Snooze Studio</h1>
-    <span class="studio-tag">Multi-platform Apps & Games Developer</span>
+    <!-- Thêm: Khối Header chứa Logo và Tiêu đề -->
+    <div class="header">
+        <img src="logo_goc.png" alt="Yawn & Snooze Studio Logo" class="logo">
+        <h1>Yawn & Snooze Studio</h1>
+        <span class="studio-tag">Multi-platform Apps & Games Developer</span>
+    </div>
+
     <p>Chào mừng bạn đến với trang chủ của <strong>Yawn & Snooze Studio</strong>. Chúng tôi là một đơn vị sáng tạo độc lập, tập trung vào việc phát triển các ứng dụng và trò chơi đa nền tảng với tiêu chí: Đơn giản, tinh tế, và tối ưu trải nghiệm người dùng.</p>
     
     <h2>Sản phẩm của chúng tôi</h2>
