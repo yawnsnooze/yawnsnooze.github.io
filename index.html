@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yawn & Snooze Studio - Official Homepage</title>
-    <!-- Cấu hình hiển thị hiển thị trên Facebook -->
+    <!-- Cấu hình hiển thị trên Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yawnsnooze.github.io/">
     <meta property="og:title" content="Yawn & Snooze Studio - Official Homepage">
     <meta property="og:description" content="Multi-platform Apps & Games Developer. Phát triển ứng dụng và trò chơi tối ưu, dọn rác Windows Pro và Task Pulse.">
-    <!-- Cập nhật: Sử dụng đường dẫn tương đối cho ảnh đại diện chia sẻ -->
     <meta property="og:image" content="logo_goc.png">
 
     <!-- Cấu hình hiển thị trên Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Yawn & Snooze Studio">
     <meta name="twitter:description" content="Multi-platform Apps & Games Developer.">
-    <!-- Cập nhật: Sử dụng đường dẫn tương đối cho ảnh đại diện chia sẻ -->
     <meta name="twitter:image" content="logo_goc.png">
+    
     <style>
         :root {
             --primary-color: #2563eb;
@@ -39,20 +38,18 @@
             background-color: #fafafa; 
         }
 
-        /* Thêm: Kiểu dáng cho container của logo */
         .header {
             text-align: center;
             margin-bottom: 40px;
         }
 
-        /* Thêm: Kiểu dáng cho ảnh logo chính */
         .logo {
-            width: 180px; /* Điều chỉnh kích thước nếu cần */
+            width: 180px;
             height: auto;
             margin-bottom: 20px;
         }
         
-        h1 { color: var(--text-main); font-size: 2.5em; margin: 0; } /* Cập nhật margin */
+        h1 { color: var(--text-main); font-size: 2.5em; margin: 0; }
         h2 { color: #2c3e50; margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
         p { color: var(--text-muted); font-size: 1.1em; }
         
@@ -63,7 +60,7 @@
             padding: 4px 12px; 
             border-radius: 4px; 
             font-weight: bold; 
-            margin-top: 10px; /* Cập nhật margin */
+            margin-top: 10px;
             margin-bottom: 20px; 
             font-size: 0.9em; 
         }
@@ -85,6 +82,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            flex-wrap: wrap;
         }
 
         .badge-new {
@@ -175,7 +173,7 @@
     </style>
 </head>
 <body>
-    <!-- Thêm: Khối Header chứa Logo và Tiêu đề -->
+    <!-- Khối Header chứa Logo và Tiêu đề -->
     <div class="header">
         <img src="logo_goc.png" alt="Yawn & Snooze Studio Logo" class="logo">
         <h1>Yawn & Snooze Studio</h1>
@@ -188,7 +186,7 @@
 
     <!-- Khu vực giới thiệu App Trình Dọn Rác Windows Pro -->
     <div class="app-showcase">
-        <h3 class="app-title">Trình Dọn Rác Windows Pro <span class="badge-new">Mới nhất</span></h3>
+        <h3 class="app-title">Trình Dọn Rác Windows Pro <span class="badge-tag">Mới nhất</span></h3>
         <p style="font-size: 1em; margin: 0 0 16px 0;">
             Phần mềm dọn dẹp hệ thống chuyên sâu dành riêng cho Windows, viết bằng ngôn ngữ C++ Native tối ưu. Giúp quét rác hệ thống, dọn dẹp bộ nhớ đệm Windows Update, làm trống Thùng rác và xóa thư mục rỗng một cách nhanh chóng, mượt mà và an toàn.
         </p>
@@ -197,9 +195,13 @@
     
     <!-- Khu vực giới thiệu App Task Pulse -->
     <div class="app-showcase">
-        <h3 class="app-title">Task Pulse <span class="badge-tag">PC & Mobile</span></h3>
+        <h3 class="app-title">
+            Task Pulse 
+            <span class="badge-new">v2.0 Mới</span> 
+            <span class="badge-tag">PC & Mobile</span>
+        </h3>
         <p style="font-size: 1em; margin: 0 0 16px 0;">
-            Giải pháp quản lý công việc và tối ưu hóa hiệu suất mạnh mẽ dành cho hệ điều hành Windows và các nền tảng di động khác. Thiết kế tối giản, mượt mà giúp bạn làm chủ thời gian.
+            Giải pháp quản lý công việc và tối ưu hóa hiệu suất mạnh mẽ. Phiên bản v2.0 cập nhật giao diện hiện đại hoàn toàn mới, nâng cấp hệ thống bảo mật, hoạt động ổn định mượt mà và hỗ trợ đa ngôn ngữ (9 ngôn ngữ).
         </p>
         <a href="task_pulse/" class="btn-visit-app">Xem chi tiết & Tải về</a>
     </div>
@@ -234,7 +236,8 @@
 
         </div>
     </div>
-<!-- Khối Góp ý / Feedback -->
+
+    <!-- Khối Góp ý / Feedback -->
     <div class="feedback-section" style="background-color: var(--bg-card); border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin-top: 48px; box-shadow: 0 2px 4px rgb(0 0 0 / 0.02);">
         <h2 style="margin-top: 0; text-align: center; border-bottom: none; padding-bottom: 0;">💬 Góp ý & Phản hồi</h2>
         <p style="text-align: center; font-size: 0.95em; margin-bottom: 20px;">
@@ -254,6 +257,7 @@
             </iframe>
         </div>
     </div>
+
     <div class="footer">
         Copyright &copy; 2026 Yawn & Snooze Studio. All rights reserved.
     </div>
