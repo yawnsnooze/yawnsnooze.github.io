@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám Phá Tất Cả Ứng Dụng - Yawn & Snooze Studio</title>
+    
+    <!-- Meta tags SEO / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tất cả ứng dụng - Yawn & Snooze Studio">
+    <meta property="og:description" content="Khám phá bộ sưu tập ứng dụng và phần mềm tối ưu cho PC & Mobile từ Yawn & Snooze Studio.">
+    <meta property="og:image" content="../logo_goc.png">
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-color: #fafafa;
+            --card-bg: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 140px;
+            height: auto;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            margin: 0 0 8px 0;
+            color: var(--text-main);
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.05em;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        /* Nút quay về trang chủ */
+        .btn-back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-back-home:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Lưới hiển thị ứng dụng */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .app-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .app-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08);
+            border-color: var(--primary-color);
+        }
+
+        .app-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .app-title {
+            font-size: 1.35em;
+            margin: 0;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .badges {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 9999px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .badge-new {
+            background-color: #ef4444;
+            color: white;
+        }
+
+        .badge-platform {
+            background-color: #f1f5f9;
+            color: #475569;
+            border: 1px solid #cbd5e1;
+        }
+
+        .app-desc {
+            color: var(--text-muted);
+            font-size: 0.95em;
+            margin: 0 0 20px 0;
+            flex: 1;
+        }
+
+        .app-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            font-size: 0.875rem;
+            color: #475569;
+        }
+
+        .app-features li {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-view {
+            display: block;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn-view:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Card Sắp Ra Mắt */
+        .app-card-coming {
+            border: 2px dashed #cbd5e1;
+            background-color: rgba(255, 255, 255, 0.5);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 220px;
+        }
+
+        .app-card-coming h3 {
+            margin: 0 0 8px 0;
+            color: #64748b;
+        }
+
+        .app-card-coming p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #94a3b8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            background-color: #ffffff;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .app-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Đường dẫn quay lại trang chủ -->
+        <a href="../" class="btn-back-home">← Quay lại Trang chủ Studio</a>
+
+        <!-- Header -->
+        <div class="header">
+            <img src="../logo_goc.png" alt="Yawn & Snooze Studio Logo" class="logo">
+            <h1>Danh Sách Ứng Dụng</h1>
+            <p class="subtitle">Khám phá các sản phẩm phần mềm độc lập được tối ưu hiệu năng, bảo mật và hoàn toàn miễn phí từ Yawn & Snooze Studio.</p>
+        </div>
+
+        <!-- Lưới danh sách ứng dụng -->
+        <div class="app-grid">
+
+            <!-- App 1: Task Pulse -->
+            <div class="app-card">
+                <div>
+                    <div class="app-header">
+                        <h2 class="app-title">Task Pulse</h2>
+                        <div class="badges">
+                            <span class="badge badge-new">v2.0 Mới</span>
+                            <span class="badge badge-platform">PC & Mobile</span>
+                        </div>
+                    </div>
+                    <p class="app-desc">
+                        Giải pháp quản lý công việc và tối ưu thời gian tối giản. Phiên bản v2 mang đến giao diện hoàn toàn mới, hệ thống bảo mật nâng cao và hỗ trợ 9 ngôn ngữ.
+                    </p>
+                    <ul class="app-features">
+                        <li>⚡ Chạy mượt mà, tối ưu tài nguyên</li>
+                        <li>🛡️ Hoàn toàn offline & Bảo mật dữ liệu</li>
+                        <li>🌐 Hỗ trợ 9 ngôn ngữ quốc tế</li>
+                    </ul>
+                </div>
+                <a href="../task_pulse/" class="btn-view">Xem chi tiết & Tải về</a>
+            </div>
+
+            <!-- App 2: Trình Dọn Rác Windows Pro -->
+            <div class="app-card">
+                <div>
+                    <div class="app-header">
+                        <h2 class="app-title">Dọn Rác Windows Pro</h2>
+                        <div class="badges">
+                            <span class="badge badge-platform">Windows PC</span>
+                        </div>
+                    </div>
+                    <p class="app-desc">
+                        Công cụ dọn dẹp hệ thống chuyên sâu bằng C++ Native. Giúp quét sạch rác Windows, xóa bộ nhớ đệm Windows Update và thư mục rỗng an toàn, nhanh chóng.
+                    </p>
+                    <ul class="app-features">
+                        <li>🚀 Lập trình bằng C++ Native siêu nhẹ</li>
+                        <li>🧹 Dọn dẹp Windows Update & Trash</li>
+                        <li>🔒 An toàn tuyệt đối cho tệp hệ thống</li>
+                    </ul>
+                </div>
+                <a href="../don_rac_pc/" class="btn-view">Xem chi tiết & Tải về</a>
+            </div>
+
+            <!-- App 3: Placeholder Sắp Ra Mắt -->
+            <div class="app-card app-card-coming">
+                <span style="font-size: 2.5rem; margin-bottom: 12px;">🚀</span>
+                <h3>Dự án tiếp theo...</h3>
+                <p>Chúng tôi đang tiếp tục nghiên cứu và phát triển các ứng dụng & trò chơi mới. Hãy đón chờ nhé!</p>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Yawn & Snooze Studio. All rights reserved. | <a href="../">Trang chủ</a></p>
+    </footer>
+
+</body>
+</html>
