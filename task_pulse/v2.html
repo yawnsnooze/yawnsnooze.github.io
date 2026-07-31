@@ -150,6 +150,55 @@
             border-radius: 6px;
         }
 
+        /* Khối Hình ảnh xem trước (Preview Images) */
+        .preview-section {
+            text-align: left;
+            margin-bottom: 32px;
+        }
+
+        .preview-section h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: var(--text-main);
+            font-size: 1.125rem;
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .preview-item {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+
+        .preview-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .preview-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid #e2e8f0;
+            object-fit: cover;
+        }
+
+        .preview-caption {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
         /* Khu vực tải App v2 */
         .download-box {
             background-color: #f0fdf4;
@@ -183,6 +232,18 @@
             display: flex;
             justify-content: center;
             gap: 16px;
+        }
+
+        .hash-box {
+            font-family: monospace;
+            font-size: 0.8125rem;
+            background-color: #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 6px;
+            color: #334155;
+            word-break: break-all;
+            max-width: 500px;
+            margin: 12px auto 0 auto;
         }
 
         /* Hệ thống nút điều hướng */
@@ -238,6 +299,12 @@
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .preview-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -296,6 +363,29 @@
                 </ul>
             </div>
 
+            <!-- Khối Hình ảnh xem trước giao diện v2 -->
+            <div class="preview-section">
+                <h3>🖼️ Xem trước giao diện v2</h3>
+                <div class="preview-grid">
+                    <div class="preview-item">
+                        <img src="preview1.png" alt="Quản lý công việc v2" class="preview-img">
+                        <span class="preview-caption">Quản lý công việc tối giản</span>
+                    </div>
+                    <div class="preview-item">
+                        <img src="preview2.png" alt="Quản lý công việc v2" class="preview-img">
+                        <span class="preview-caption">Quản lý công việc tối giản</span>
+                    </div>
+                    <div class="preview-item">
+                        <img src="preview3.png" alt="Cài đặt v2" class="preview-img">
+                        <span class="preview-caption">Giao diện cài đặt</span>
+                    </div>
+                    <div class="preview-item">
+                        <img src="preview4.png" alt="Bảo mật v2" class="preview-img">
+                        <span class="preview-caption">Hệ thống bảo mật nâng cao</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Khu vực tải App v2 -->
             <div class="download-box">
                <a href="Task%20Pulse%20v2%20Setup.exe" download="Task Pulse v2 Setup.exe" class="btn-download">Tải về v2 cho Windows (.exe)</a>
@@ -304,7 +394,7 @@
                     <span><strong>Dung lượng:</strong> ~15 MB</span>
                     <span><strong>Nền tảng:</strong> Windows 10/11</span>
                 </div>
-                 <div class="hash-box">
+                <div class="hash-box">
                     SHA256 : 3B810764E8FB1E05E0DA2708C65CAE12A6C41F0C941BB71164724857E7EBE643
                 </div>
             </div>
