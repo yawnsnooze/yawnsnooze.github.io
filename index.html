@@ -264,5 +264,20 @@
     <div class="footer">
         Copyright &copy; 2026 Yawn & Snooze Studio. All rights reserved.
     </div>
+    <!-- Tự động điền tên App vào Google Form dựa trên tham số ?app= từ URL -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const appName = urlParams.get('app');
+            
+            if (appName) {
+                const iframe = document.querySelector('.feedback-section iframe');
+                const formBaseUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdiTq9xcUKqiC-hd-aK81pjCCKo6wSRxC7JRS89DShCKEk6oQ/viewform?embedded=true";
+                
+                // Gắn entry.2005620554 đã mã hóa vào src của iframe
+                iframe.src = `${formBaseUrl}&entry.2005620554=${encodeURIComponent(appName)}`;
+            }
+        });
+    </script>
 </body>
 </html>
